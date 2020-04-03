@@ -14,7 +14,7 @@ int main()
     }
     else
     {
-        cout<<"NOT ACCEPTED";
+        cout<<"REJECTED";
     }
 return 0;
 }
