@@ -1,3 +1,4 @@
+//Deterministic Finite Automata program for accepting strings starting and ending with 'a'
 #include<iostream>
 #include<string.h>
 
