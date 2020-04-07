@@ -1,3 +1,4 @@
+// Function = x^3 - 4*x + 1, Can be changed in definition of bisection function
 #include<iostream>
 
 using namespace std;
