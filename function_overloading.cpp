@@ -11,24 +11,23 @@ float area(float);
 int main()
 {
     int i,l,b;
-float r;
+    float r;
+    
     cout<<"1. Area of Circle\n2. Area of Rectangle\n";
     cin>>i;
-    if(i==1)
-    {
+    
+    if(i==1){
         cout<<"Enter radius of circle : ";
         cin>>r;
         cout<<"Area of Circle : "<<area(r);
-    }
-    if(i==2)
-    {
+    }else if(i==2){
         cout<<"Enter length : ";
         cin>>l;
         cout<<"Enter breadth : ";
         cin>>b;
         cout<<"Area of rectangle : "<<area(l,b);
-
     }
+    
     return 0;
 }
 
