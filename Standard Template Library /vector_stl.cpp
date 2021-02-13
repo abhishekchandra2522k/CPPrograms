@@ -26,14 +26,17 @@ int main(){
         v3.push_back(10*(i+1));
     }
     cout<<v3.capacity();
-    v1.pop_back();
-    v1.pop_back();
-    v1.pop_back();
+    v3.pop_back();
     cout<<v3.capacity();
     cout<<v3.size();
-    for(int i = 0 ; i <= 9; i++){
-        cout<<v3[i];
+    cout<<v3.front();
+    cout<<v3.back();
+
+    vector <int>:: iterator it = v3.begin();
+
+    v3.insert(it+3,35);
+    for(int i = 0; i < v3.size(); i++){
+        cout<<v3[i]<<endl;
     }
     return 0;
-
 }
