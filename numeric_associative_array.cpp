@@ -1,4 +1,5 @@
 #include<iostream>
+#include<map>
 
 using namespace std;
 
@@ -24,5 +25,11 @@ int main(){
     float doge[10];                   // All these are numeric array
     student students[10];
 
-    // associative array
+    // associative array  - maps (key-value pair)
+    map <int, string> crypto;
+
+    crypto[6] = "Doge";
+    crypto[0] = "USTD";
+    crypto[3] = "BTC";
+    return 0;
 }
