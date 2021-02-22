@@ -1,0 +1,21 @@
+#include<iostream>
+#include<cstring>
+
+using namespace std;
+
+int main(){
+    // some data about character array
+    char s1[10] = "Hello";
+    char s2[10];
+    // s2 = s1; this is a wrong assignment, as '=' doesn't work with character arrays.
+    // s1 = "Students"  Error
+    // s2 > s1 Error
+    // s3 = s1 + s2 Error
+
+    strcpy(s2,"Students");  // Using predefined functions
+    int i = strcmp(s2,s1);
+    char s3[30];
+    strcpy(s3,strcat(s1,s2));
+
+    // STRINGS 
+}
