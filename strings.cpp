@@ -1,6 +1,6 @@
 #include<iostream>
-#include<cstring>
-
+#include<string.h>
+#include<string>
 using namespace std;
 
 int main(){
@@ -18,4 +18,15 @@ int main(){
     strcpy(s3,strcat(s1,s2));
 
     // STRINGS 
+    char str[] = "Coin";
+    string str1(str); // via char array pointer (Constructor)
+    string str2("Doge"); // via reference (Constructor)
+    // cout<<str1<<str2;
+
+    string str3;
+    str3 = "To the Moon"; // Constructor not called, '=' assignment operator used
+
+    string str4;
+    str4 = str2 + str1 + str3;
+    cout<<str4;
 }
