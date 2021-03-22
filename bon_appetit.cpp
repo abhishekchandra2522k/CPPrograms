@@ -8,18 +8,28 @@ vector<string> split(const string &);
 
 // Complete the bonAppetit function below.
 void bonAppetit(vector<int> bill, long unsigned int k,long unsigned int b) {
-    long unsigned int sum = 0, sumk = 0;
-    for(long unsigned int i = 0; i < bill.size(); ++i){
-        if(i != k){
-            sum += bill[i];
-        }
-    }
-    sumk = sum / 2;
-    if(b == sumk){
+    // Less complexity code
+    long unsigned int sum = 0;
+    sum = accumulate(bill.begin(), bill.end(), 0) - bill[k];
+    sum /= 2;
+    if(b == sum){
         cout<<"Bon Appetit";
     }else{
-        cout<<b-sumk;
+        cout<<b-sum;
     }
+    // Using for loop
+    // long unsigned int sum = 0, sumk = 0;
+    // for(long unsigned int i = 0; i < bill.size(); ++i){
+    //     if(i != k){
+    //         sum += bill[i];
+    //     }
+    // }
+    // sumk = sum / 2;
+    // if(b == sumk){
+    //     cout<<"Bon Appetit";
+    // }else{
+    //     cout<<b-sumk;
+    // }
 
 }
 
