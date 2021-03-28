@@ -6,10 +6,6 @@ using namespace std;
  * Complete the timeConversion function below.
  */
 string timeConversion(string s) {
-    /*
-     * Write your code here.
-     */
-     
     if(s[8] == 'A'){
        if(s[0] == '1' && s[1] == '2'){
            s.replace(0,2,"00");   
