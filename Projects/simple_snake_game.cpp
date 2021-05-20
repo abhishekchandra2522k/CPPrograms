@@ -1,5 +1,6 @@
 #include<iostream> 
-// #include<conio.h>
+#include<curses.h>
+#include<ncurses.h>
 using namespace std;
 
 
@@ -53,7 +54,7 @@ void draw(){
 }
 
 void input(){
-
+    // if(_kbhit())
 }
 
 void logic(){
