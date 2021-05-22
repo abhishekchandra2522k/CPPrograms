@@ -1,4 +1,4 @@
-#include<iostream>>
+#include<iostream>
 
 using namespace std;
 
@@ -10,8 +10,15 @@ int main(){
 
     //Run time initialization
     int d[10];
-    for(int i = 0; i<10; ++i){
+    for(int i = 0; i<2; ++i){
         cin>>d[i]; // Input numbers in the terminal on run time
     }
+
+    // Run time declaration
+    int n;
+    cin>>n;
+    int e[n];
+
+    cout<<sizeof(e);
     return 0;
 }
