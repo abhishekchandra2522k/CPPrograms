@@ -5,9 +5,14 @@ using namespace std;
 int miN(int a[], int n){
     int min = a[0];
     for(int i = 0; i < n; i++){
-        if(min > a[i]){
+        if(min > a[i]){ 
             min = a[i];
         }
+
+
+        // Alternate code
+        // int mini
+        // mini = min(mini, a[i]) // min is a inbuilt function
     }
     return min;
 }
@@ -17,6 +22,8 @@ int maX(int a[], int n){
     for(int i = 0; i < n; ++i){
         if(max < a[i]){
             max = a[i];
+
+            // max = max(max,a[i]);
         }
     }
 
