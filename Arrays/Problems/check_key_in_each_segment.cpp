@@ -2,24 +2,36 @@
 
 using namespace std;
 
-void check_key(int arr[], int key, int x, int n){
-    int count = 0;
-    int y = 0;
-    for(int i = 0; i < n; i++){
-        count++;
-        if(count == x){
-            y = 0;
-            count = 0;
-            continue;
-        }
+bool check_key(int arr[], int x, int k, int n){ // x : key, k: interval, n: size
+    int i;
+    for(i = 0; i < n; i+=k){
+        int j;
+        for(j = 0; j < k; j++){
+            if(arr[i+j] == x){
+                break;
+            }
 
-        if(arr[i] == key){
-            y++;
-        }
-        if(y == x){
-
+            if(j == k){
+                return false;
+            }
         }
     }
+    // when n is mutilple of k
+    if(i == n){
+        return true;
+    }
+
+    // checking the last segment of array if n is not multiple of k
+    int j;
+    for(j = i - k; j < n; j++){
+        if(arr[j] == x){
+            break;
+        }
+    }
+    if(j == n){
+        return false;
+    }
+    return true;
 }
 
 int main(){
@@ -42,7 +54,11 @@ int main(){
     cout<<"Enter interval : ";
     cin>>x;
     
-    check_key(a,key,x,size);
+    if(check_key(a,key,x,size)){
+        cout<<"YES\n";
+    }else{
+        cout<<"NO\n";
+    }
 
     return 0;
 }
