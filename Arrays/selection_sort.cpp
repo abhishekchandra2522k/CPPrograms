@@ -41,6 +41,8 @@ int main(){
 
         selection_sort(a,size);
         print_array(a,size);
+    }else{
+        cout<<"Index error: size out of bound";
     }
     return 0;
 }
