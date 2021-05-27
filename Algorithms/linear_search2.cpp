@@ -27,7 +27,7 @@ int main(){
         cin>>k;
         int res = linear_search(a,size,k);
         if(res != -1){
-            cout<<"Position : "<<res+1<<", Index : "<<res<<endl;
+            cout<<"Position : "<<res+1<<", Index : "<<res<<endl; // Prints position and index of the first occurance of the element
         }else{
             cout<<"Not found"<<endl;
         }
