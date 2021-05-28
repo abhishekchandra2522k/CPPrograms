@@ -21,11 +21,11 @@ int main(){
     };
 
     // customer2.insert(pair<int, string>(122,"Doge"))
-    customer2.insert({122, "DOge"});
+    customer2.insert({122, "Doge"});
     // USE of ITERATOR
-    map <int, string>:: iterator p = customer2.begin();
+    map <int, string>:: iterator p = customer2.begin(); // p is the iterator
     while(p != customer2.end()){
-        cout<<p->second<<endl;
+        cout<<p->second<<endl; // p->first gives key where p in pointing, 
         p++;
     }
 
