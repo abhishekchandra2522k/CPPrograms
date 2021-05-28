@@ -56,3 +56,11 @@ int main(){
     }
     return 0;
 }
+
+// Time Complexity:
+// Best case: element on index mid,
+// O(1)
+
+// Average case: O(logN) // when the loop iterates the way, when the array or vector becomes half, then half, like in merge sort, binary search, then only complexity comes out to be O(log)
+
+// Worst case: O(logN)
