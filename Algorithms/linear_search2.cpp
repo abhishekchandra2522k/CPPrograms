@@ -36,3 +36,10 @@ int main(){
     }
     return 0;
 }
+
+// Time Complexity
+// Best Case : O(1)
+// Worst Case : O(n)
+// Average Case : E (sum of all cases) / number of cases
+// i.e. 1 + 2 + 3 + 4 + 5 + ... + n / n = (n(n+1)/2) / n = (n+1)/2
+// Average : O(n+1/2)
