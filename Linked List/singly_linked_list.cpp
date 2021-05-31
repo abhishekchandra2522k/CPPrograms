@@ -7,6 +7,9 @@ struct node{
     struct node *next;
 };
 
+
+
 int main(){
+    struct node first;
     return 0;
 }
