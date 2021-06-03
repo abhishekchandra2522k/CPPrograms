@@ -7,7 +7,7 @@ struct node{
     struct node *next;
 };
 
-
+struct node *head, *newnode;
 
 int main(){
     struct node first;
