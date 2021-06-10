@@ -14,7 +14,7 @@ int main(){
     // cout<<v6[1];  OUTPUT : DogeDogeDoge
     // cout<<v6[2];
                           // CAPACITY
-    // cout<<v3.capacity();     0  Initial
+    // cout<<v3.capacity();     0  (Initiallly)
     // v3.push_back(1);         1  
     // cout<<v3.capacity();     
     // v3.push_back(2);         2
