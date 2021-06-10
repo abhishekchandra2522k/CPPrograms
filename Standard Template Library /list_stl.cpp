@@ -16,7 +16,7 @@ int main(){
     // l1.sort();
     l1.reverse();
     // l1.clear();
-    // l1.pop_back()
+    // l1.pop_back();
     // l1.pop_front();
     // l1.push_back();
     // l1.push_front();
@@ -29,4 +29,5 @@ int main(){
     }
 
     // cout<<"Size = "<<l2.size();
+    return 0;
 }
