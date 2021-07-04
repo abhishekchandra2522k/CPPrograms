@@ -5,6 +5,8 @@
 # Prerequisites
 *.d
 
+sample.cpp
+
 # Compiled Object files
 *.slo
 *.lo
