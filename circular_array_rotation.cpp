@@ -16,16 +16,29 @@ vector<string> split(const string &);
  *  3. INTEGER_ARRAY queries
  */
 // Partially Accepted Solution
+// vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries) {
+//     vector<int> res;
+//     unsigned int s = a.size();
+//     for(int i = 0; i < k; ++i){
+//         int temp = a[s-1]; 
+//         for(int j = s - 1; j >= 0; j--){
+//             a[j+1] = a[j];
+//         }
+//         a[0] = temp; 
+//     }
+//     for(int i = 0; i < queries.size(); i++){
+//         res.push_back(a[queries[i]]);
+//     }
+//     return res;
+// }
+
+// Accepted Solution
 vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries) {
     vector<int> res;
-    unsigned int s = a.size();
-    for(int i = 0; i < k; ++i){
-        int temp = a[s-1]; 
-        for(int j = s - 1; j >= 0; j--){
-            a[j+1] = a[j];
-        }
-        a[0] = temp; 
-    }
+    k = k % a.size();
+    reverse(a.begin(), a.end());
+    reverse(a.begin(), a.begin() + k);
+    reverse(a.begin() + k, a.end());
     for(int i = 0; i < queries.size(); i++){
         res.push_back(a[queries[i]]);
     }
