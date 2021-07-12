@@ -1,18 +1,13 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-
-// Defining ListNode LinkedList (User Defined Data Type)
-struct ListNode{
+struct node{
     int data;
-    struct ListNode *next;
-};
+    struct node *next;
+}*head;
 
-// Defining its operations (Abstract Data Type)
-
-// ListLength function takes a head pointer as a parameter to calculate length of a linked list
-int ListLength(struct ListNode *head){
-    struct ListNode *current = head;
+int ListLength(){
+    struct node *current = head;
     int count = 0;
 
     while(current != NULL){
@@ -22,40 +17,84 @@ int ListLength(struct ListNode *head){
     return count;
 };
 
-// Singly Linked List Insertion 
-// Insertion can be performed in three ways
-void InsertInLinkedList(struct ListNode **head, int data, int position){
-    int k = 1;
-    struct ListNode *p, *q, *newNode;
-    newNode = (ListNode *)malloc(sizeof(struct ListNode));
-    if(!newNode){
-        cout<<"Memory Error";
-        return;
-    }
-    newNode->data = data;
-    p = *head;
+struct node* createNode(){
+    struct node *n;
+    n = (struct node*)malloc(sizeof(struct node));
+    return n;
+}
 
-    // Inserting at the beginning
-    if(position == 1){
-        newNode->next = p;
-        *head = newNode;
+void insertNode(){
+    struct node* temp, *t;
+    temp = createNode();
+    cout<<"Enter data";
+    cin>>temp->data;
+    temp->next = NULL;    
+    if(head == NULL){
+        head = temp;
     }else{
-        // Traverse the list until the position where we want to insert
-        while((p != NULL) && (k < position)){
-            k++;
-            q = p;
-            p = p->next;
+        t = head;
+        while(t->next != NULL){
+            t = t->next;
         }
-        q->next = newNode; //more optimum way to do this
-        newNode->next = p;
+        t->next = temp;
     }
 }
 
+void deleteNode(){
+    struct node *r;
+    if(head == NULL){
+        cout<<"List is empty.";
+    }else{
+        r = head;
+        head = head->next;
+        free(r);
+    }
+
+}
+
+void viewList(){
+    struct node *t;
+    if(head == NULL){
+        cout<<"List is empty.";
+    }else{
+        t = head;
+        while(t != NULL){
+            cout<<t->data<<" ";
+            t = t->next;
+        }
+    }
+}
+
+int menu(){
+    int choice;
+    cout<<"1. Add value to the list\n";
+    cout<<"2. Delete first node\n";
+    cout<<"3. View List\n";
+    cout<<"4. Exit\n";
+    cout<<"Enter a choice";
+    cin>>choice;
+    return choice;
+}
 
 int main(){
-    struct ListNode firstLL, **head = NULL;
-    InsertInLinkedList(NULL, 25, 1);
-    cout<<ListLength(firstLL.next);
-
+    while(true){
+        switch (menu())
+        {
+        case 1:
+            insertNode();
+            break;
+        case 2:
+            deleteNode();
+            break;
+        case 3:
+            viewList();
+            break;
+        
+        case 4:
+            exit(0);
+        default:
+            cout<<"Invalid choice";
+        }
+    }
     return 0;
 }
