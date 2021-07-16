@@ -22,7 +22,7 @@ int lcm(int a, int b){
 
 int main(){
     int x,y;
-    cout<<"Enter two values to find it's GCD/HCF :";
+    cout<<"Enter two values to find it's GCD / HCF and LCM :";
     cin>>x>>y;
     cout<<"GCD / HCF: "<<gcd(x, y)<<" LCM: "<<lcm(x,y)<<endl;
     return 0;
