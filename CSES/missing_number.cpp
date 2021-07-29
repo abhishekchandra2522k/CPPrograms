@@ -2,17 +2,18 @@
 #include <numeric>
 using namespace std;
 
+#define ll long long
+
 int main()
 {
-    long long n;
+    ll n, sum = 0;
     cin >> n;
-    long long a[n - 1];
-    for (long long i = 0; i < n - 1; i++)
+    for (int i = 1; i < n; i++)
     {
-        cin >> a[i];
+        int a;
+        cin >> a;
+        sum += a;
     }
-    long long sum = n * (n + 1) / 2;
-    long long asum = accumulate(a, a + n - 1, 0);
-    cout << sum - asum;
+    cout << (n * (n + 1)) / 2 - sum;
     return 0;
 }
