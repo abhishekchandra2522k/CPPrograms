@@ -4,10 +4,10 @@ using namespace std;
 
 int main()
 {
-    int n;
+    long long n;
     cin >> n;
     int temp = n;
-    int count = ceil(log10(n));
+    long long count = log10(n) + 1;
     cout << count << endl;
     int sum = 0;
     while (temp > 0)
