@@ -4,15 +4,15 @@ using namespace std;
 
 void moftwo(int x)
 {
-    cout << x * 2 << endl;
+    cout << x * 2 << " ";
 }
 
 class three
 {
 public:
-    void mofthree(int x)
+    void operator()(int x)
     {
-        cout << x * 3 << endl;
+        cout << x * 3 << " ";
     }
 };
 
@@ -21,7 +21,7 @@ int main()
     int arr[5] = {1, 2, 3, 4, 5};
 
     for_each(arr, arr + 5, moftwo);
-
+    cout << endl;
     three ob1;
     for_each(arr, arr + 5, ob1);
 
