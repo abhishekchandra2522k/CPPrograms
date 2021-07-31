@@ -6,11 +6,14 @@ using namespace std;
 
 int fact(int n)
 {
-    if (n == 1 || n == 0)
+    cout << "I am calculating F(" << n << ")" << endl;
+    if (n == 0)
     {
         return 1;
     }
-    return n * fact(n - 1);
+    int F = n * fact(n - 1);
+    cout << "Done ! F(" << n << ") = " << F << endl;
+    return F;
 }
 
 int main()
