@@ -25,7 +25,7 @@ int main()
     cout << "4. Swap without the 3rd variable (using addition and subtraction).\n";
     cout << "5. Swap without the 3rd variable (using Multiplication and Division) (where, a, b != 0).\n";
     cout << "6. Swap values using XOR operator .\n";
-    cout << "7. Swap using inbulit function .\n";
+    cout << "7. Swap using inbuilt function .\n";
     cout << "Select a choice : ";
     cin >> choice;
 
