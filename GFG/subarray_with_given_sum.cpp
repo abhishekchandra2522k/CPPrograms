@@ -9,7 +9,7 @@ public:
     {
         vector<int> ans;
 
-        int curr_sum = 0, start = 0;
+        int curr_sum = arr[0], start = 0;
         for (int i = 1; i <= n; i++)
         {
             while (curr_sum > s && start < i - 1)
