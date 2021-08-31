@@ -8,7 +8,9 @@ struct Node
     Node *next;
 };
 
-Node *Insert(Node *head, int data)
+Node *head;
+
+void *Insert(int data)
 {
     Node *temp = new Node();
     temp->data = data;
@@ -24,7 +26,6 @@ Node *Insert(Node *head, int data)
         temp2 = (*temp2).next;
     }
     temp2->next = temp;
-    return head;
 }
 
 void Print(Node *p)
@@ -38,26 +39,31 @@ void Print(Node *p)
     Print(p->next);
 }
 
-void reversePrint(Node *p)
+void reverseLL(Node *p)
 {
-    if (p == NULL)
+    if (p->next == NULL)
     {
+        head = p;
         return;
     }
-    reversePrint(p->next);
-    cout << p->data << " ";
+    reverseLL(p->next);
+    // Node *q = p->next;
+    p->next->next = p;
+    // q->next = p;
+    p->next = NULL;
 }
 
 int main()
 {
-    Node *head = NULL;
-    head = Insert(head, 2);
-    head = Insert(head, 4);
-    head = Insert(head, 6);
-    head = Insert(head, 8);
-    head = Insert(head, 10);
-    head = Insert(head, 12);
+    head = NULL;
+    Insert(2);
+    Insert(4);
+    Insert(6);
+    Insert(8);
+    Insert(10);
+    Insert(12);
     Print(head);
-    reversePrint(head);
+    reverseLL(head);
+    Print(head);
     return 0;
 }
