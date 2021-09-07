@@ -2,9 +2,9 @@
 
 using namespace std;
 
-bool sortedOrUnsorted(int arr[], int n)
+bool sortedOrUnsorted(int arr[], int n, int size)
 {
-    if (n > 4)
+    if (n > size - 1)
     {
         return true;
     }
@@ -12,7 +12,7 @@ bool sortedOrUnsorted(int arr[], int n)
     {
         return false;
     }
-    sortedOrUnsorted(arr, ++n);
+    sortedOrUnsorted(arr, ++n, size);
 }
 
 int main()
@@ -24,6 +24,6 @@ int main()
     {
         cin >> arr[i];
     }
-    cout << sortedOrUnsorted(arr, 0);
+    cout << sortedOrUnsorted(arr, 0, n);
     return 0;
 }
