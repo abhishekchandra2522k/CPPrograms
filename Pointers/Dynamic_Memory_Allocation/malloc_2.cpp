@@ -1,3 +1,4 @@
+// C Program to dynamically allocate an array ptr
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,18 +9,26 @@ int main()
 
     // dynamically allocated array of size n using malloc() (during run time)
     // array is initialized with garbage values
+    // arr stores the base address of the memory block
     int *arr = (int *)malloc(n * sizeof(int));
 
-    // filling the array with index values
-    for (int i = 0; i < n; i++)
+    if (arr == NULL)
     {
-        *(arr + i) = i;
+        printf("Memory cannot be allocated at this point of time!");
     }
-
-    // printing array using pointer
-    for (int i = 0; i < n; i++)
+    else
     {
-        printf("%d ", *(arr + i));
+        // filling the array with index values
+        for (int i = 0; i < n; i++)
+        {
+            *(arr + i) = i;
+        }
+
+        // printing array using pointer
+        for (int i = 0; i < n; i++)
+        {
+            printf("%d ", *(arr + i));
+        }
     }
     return 0;
 }
