@@ -13,9 +13,15 @@ int main()
     // memory block deallocated using free() function
     free(ptr);
 
+    // garbage value
+    printf("%d", *ptr);
+
     // this line added will help us to determine that ptr is currently not pointing to any location
     // this pointer is known as NULL Pointer
     ptr = NULL;
+
+    // no output
+    printf("%d", *ptr);
 
     return 0;
 }

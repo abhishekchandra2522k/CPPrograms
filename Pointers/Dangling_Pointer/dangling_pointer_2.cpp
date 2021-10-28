@@ -14,6 +14,7 @@ int main()
     free(ptr);
 
     // here ptr acts as a dangling pointer
+    printf("%d", *ptr);
 
     return 0;
 }

@@ -16,6 +16,7 @@ int main()
 
     // temp pointer is now removed from the memory (out of scope)
     // now str is a dangling pointer
+    printf("%d", **str);
 
     return 0;
 }
